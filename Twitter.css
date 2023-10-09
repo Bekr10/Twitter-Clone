@@ -1,0 +1,1211 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background-color: var(--bg-color);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 15px;
+}
+
+:root {
+  --bg-color: #fff;
+  --color-text: #000;
+  --main-color: #ccc;
+  --header-bg: #f9f9f9;
+  --Hashtag-color: rgba(0, 0, 0, 0.05);
+  --SpanVideo: rgba(0, 0, 0, 0.05);
+  --serach-bg: #fff;
+  --spanVideoColor: #272727;
+  --Hashtag-bg: #f9f9f9;
+  --red-color: #ff3150;
+  --section-color: #eff7fa;
+  --green-color: #33d1cc;
+  --yello-color: #ffc400;
+  --dark-color: #19283f;
+  --black-color: #000016;
+  --none-color:#DDD0C8;
+  --color-Next: #000;
+  --bg-left: rgb(239, 243, 244);
+  --large-size: 20px;
+  --medueim-size: 15px;
+  --small-size: 10px;
+  --V-small-size: 5px;
+  --Bold-size: 700;
+  --med-size: 500;
+  --Small-size: 300;
+  --blueWeb-color: rgb(29, 155, 240);
+  --yellWeb-color: rgb(255, 212, 0);
+  --redWeb-color: rgb(249, 24, 128);
+  --MovWeb-color: rgb(120, 86, 255);
+  --OrangeWeb-color: rgb(255, 122, 0);
+  --greenWeb-color: rgb(0, 186, 124);
+}
+
+button {
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
+.Dark-mode {
+  --spanVideoColor: #ccc;
+  --bg-left: rgb(22, 24, 28);
+  --bg-color: #0b0b0b;
+  --color-text: #fff;
+  --header-bg: #0b0b0b;
+  --main-color:#2c2c2c;
+  --Hashtag-color: rgba(255, 255, 255, 0.05);
+  --SpanVideo: rgba(255, 255, 255, 0.1);
+  --serach-bg: #000;
+  --Hashtag-bg: #0b0b0b;
+  --color-Next: #fff;
+}
+
+.blue {
+  --color-text:rgb(29, 155, 240);
+}
+
+.yello {
+  --color-text:rgb(255, 212, 0);
+}
+
+.red {
+  --color-text: rgb(249, 24, 128);
+}
+
+.Move {
+  --color-text: rgb(120, 86, 255);
+}
+
+.orange {
+  --color-text: rgb(255, 122, 0);
+}
+
+.green {
+  --color-text:rgb(0, 186, 124);
+}
+
+.LeftSection {
+  position: fixed;
+  left: 22rem;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100%;
+}
+.LeftSection .TwitterIcon {
+  width: 50px;
+  height: 45px;
+  border-radius: 50%;
+}
+.LeftSection .TwitterIcon:hover {
+  background-color: #ececec;
+}
+.LeftSection .Cards {
+  margin-top: 20px;
+}
+.LeftSection .Cards .Card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 11px 10px;
+  gap: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 20px;
+  transition: 0.5s ease;
+}
+.LeftSection .Cards .Card .CardNotifi {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.LeftSection .Cards .Card .CardNotifi .NotifiNumber {
+  background-color: var(--color-text);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  position: relative;
+  right: 18px;
+  top: -8px;
+  color: var(--bg-color);
+}
+.LeftSection .Cards .Card .rightspanNotifi {
+  position: relative;
+  right: 20px;
+}
+.LeftSection .Cards .Card i {
+  font-size: 2.3rem;
+  color: var(--color-Next);
+}
+.LeftSection .Cards .Card span {
+  color: var(--color-text);
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.LeftSection .Cards .Card .ImageIcon {
+  width: 35px;
+}
+.LeftSection .Cards .Card:hover {
+  background-color: var(--bg-left);
+}
+.LeftSection .Cards .active span {
+  font-weight: 700;
+}
+.LeftSection .Cards .ButtonPost {
+  margin-top: 25px;
+  height: 50px;
+  width: 200px;
+  background-color: var(--color-Next);
+  padding: 10px;
+  border-radius: 20px;
+  color: var(--bg-color);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.LeftSection .Profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 20px;
+  width: 70%;
+  transition: 0.5s ease;
+  padding: 5px;
+  border-radius: 20px;
+  gap: 80px;
+}
+.LeftSection .Profile .rightProfileSide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.LeftSection .Profile .rightProfileSide img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.LeftSection .Profile .rightProfileSide .TextName {
+  padding-left: 10px;
+}
+.LeftSection .Profile .rightProfileSide .TextName h4 {
+  font-weight: 800;
+  color: var(--color-text);
+}
+.LeftSection .Profile .rightProfileSide .TextName span {
+  color: var(--color-text);
+}
+.LeftSection .Profile .IconProfileSide i {
+  color: var(--color-Next);
+}
+.LeftSection .Profile:hover {
+  background-color: var(--bg-left);
+}
+
+.ProfileListHome {
+  background-color: var(--bg-color);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 300px;
+  border-radius: 20px;
+  position: absolute;
+  top: 82%;
+  left: 17%;
+}
+.ProfileListHome .FirstCloneHome {
+  margin-top: 5px;
+  padding: 10px 15px;
+}
+.ProfileListHome .FirstCloneHome span {
+  color: var(--color-Next);
+  font-size: 1rem;
+}
+.ProfileListHome .FirstCloneHome:hover {
+  background-color: var(--bg-left);
+}
+.ProfileListHome .SecondCloneHome {
+  margin-bottom: 5px;
+  padding: 10px 15px;
+  color: var(--color-Next);
+}
+.ProfileListHome .SecondCloneHome:hover {
+  background-color: var(--bg-left);
+}
+
+main {
+  width: 90%;
+  height: 100%;
+}
+main .MainTwetter {
+  width: 100%;
+  display: flex;
+}
+main .MainTwetter .Mid-Aside {
+  margin-left: 40%;
+  border-left: 1px solid rgb(239, 243, 244);
+  border-right: 1px solid rgb(239, 243, 244);
+  height: 100%;
+  width: 50%;
+}
+main .MainTwetter .Mid-Aside .HomeBar {
+  display: flex;
+  flex-direction: column;
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  backface-visibility: hidden;
+  position: fixed;
+  z-index: 9;
+  width: 33.4%;
+}
+main .MainTwetter .Mid-Aside .HomeBar .HeadingHome {
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding-left: 15px;
+  position: relative;
+  top: 10px;
+  color: var(--color-text);
+}
+main .MainTwetter .Mid-Aside .HomeBar .HeadingPages {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 30px;
+  border-bottom: 1px solid rgb(239, 243, 244);
+  padding-bottom: 18px;
+}
+main .MainTwetter .Mid-Aside .HomeBar .HeadingPages span {
+  cursor: pointer;
+  color: var(--color-Next);
+}
+main .MainTwetter .Mid-Aside .HomeBar .HeadingPages .ForTweet {
+  font-weight: 700;
+  color: var(--color-Next);
+}
+main .MainTwetter .Mid-Aside .HomeBar .HeadingPages .ForTweet::after {
+  content: "";
+  background-color: var(--color-text);
+  width: 14%;
+  height: 5px;
+  position: absolute;
+  top: 94px;
+  left: 24.5%;
+  border-radius: 20px;
+}
+main .MainTwetter .Mid-Aside .TweetCreate {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin-top: 100px;
+}
+main .MainTwetter .Mid-Aside .TweetCreate .ImgPageCrate {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0;
+}
+main .MainTwetter .Mid-Aside .TweetCreate .ImgPageCrate img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+main .MainTwetter .Mid-Aside .TweetCreate .ImgPageCrate span {
+  font-size: 1.3rem;
+  padding-right: -10px;
+  position: relative;
+  left: 15px;
+  color: #727272;
+}
+main .MainTwetter .Mid-Aside .TweetCreate .IconsEmoje {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 0 60px;
+  margin-top: 10px;
+}
+main .MainTwetter .Mid-Aside .TweetCreate .IconsEmoje div {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+main .MainTwetter .Mid-Aside .TweetCreate .IconsEmoje div i {
+  font-size: 1.5rem;
+  color: var(--color-text);
+}
+main .MainTwetter .Mid-Aside .TweetCreate .IconsEmoje .ButTwit {
+  padding: 10px;
+  background-color: var(--color-text);
+  border-radius: 20px;
+  width: 80px;
+  color: #fff;
+  height: 35px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .MainTwetter .Mid-Aside .ShowMore span {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  color: var(--color-text);
+  font-size: 1.1rem;
+  font-weight: 500;
+  justify-content: center;
+  border-top: 1px solid rgb(239, 243, 244);
+  transition: 0.5s ease;
+}
+main .MainTwetter .Mid-Aside .ShowMore span:hover {
+  background-color: #ccc;
+}
+main .MainTwetter .Mid-Aside .Tweets {
+  display: flex;
+  flex-direction: column;
+}
+main .MainTwetter .Mid-Aside .Tweets .Tweet {
+  display: flex;
+  width: 100%;
+  min-height: 100px;
+  border-top: 1px solid rgb(239, 243, 244);
+  padding: 12px 16px;
+  transition: 0.5s ease;
+}
+main .MainTwetter .Mid-Aside .Tweets .Tweet img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+main .MainTwetter .Mid-Aside .Tweets .Tweet .details {
+  display: flex;
+  padding: 0 10px;
+  flex-direction: column;
+}
+main .MainTwetter .Mid-Aside .Tweets .Tweet .details .name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+main .MainTwetter .Mid-Aside .Tweets .Tweet .details .name .Tweet-name {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 1.2rem;
+}
+main .MainTwetter .Mid-Aside .Tweets .Tweet .details .name .Tweet-name .Handel-name {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--color-Next);
+}
+main .MainTwetter .Mid-Aside .Tweets .Tweet .details .name i {
+  color: var(--color-text);
+}
+main .MainTwetter .Mid-Aside .Tweets .Tweet .details .text {
+  padding: 3px 0;
+}
+main .MainTwetter .Mid-Aside .Tweets .Tweet .details .text p {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-Next);
+}
+main .MainTwetter .Mid-Aside .Tweets .Tweet .details .text p .spanColor {
+  color: var(--color-text);
+}
+main .MainTwetter .Mid-Aside .Tweets .Tweet .details .text .ImageSheet {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 20px;
+  margin: 5px 0 5px 0px;
+}
+main .MainTwetter .Mid-Aside .Tweets .Tweet .details .Arabic p {
+  direction: rtl;
+}
+main .MainTwetter .Mid-Aside .Tweets .Tweet .details .iconpack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+main .MainTwetter .Mid-Aside .Tweets .Tweet .details .iconpack .Icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+main .MainTwetter .Mid-Aside .Tweets .Tweet .details .iconpack .Icon i {
+  color: rgb(83, 100, 113);
+  font-size: 1.1rem;
+}
+main .MainTwetter .Mid-Aside .Tweets .Tweet .details .iconpack .Icon span {
+  font-size: 13px;
+  padding-left: 3px;
+  color: rgb(83, 100, 113);
+}
+main .MainTwetter .Mid-Aside .Tweets .Tweet:hover {
+  background-color: var(--bg-left);
+}
+main .MainTwetter .Mid-Aside .Tweets .Arabic .TweetDetail h3 {
+  margin-left: 100px;
+}
+main .LastAside {
+  padding: 0px 0 0 30px;
+}
+main .LastAside .Search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  margin-bottom: 10px;
+  z-index: 10;
+  background-color: var(--bg-color);
+  padding: 10px 0;
+}
+main .LastAside .Search input {
+  border-radius: 20px;
+  width: 330px;
+  height: 40px;
+  outline: none;
+  padding: 10px 0px 10px 45px;
+  background-color: rgb(239, 243, 244);
+  border: none;
+}
+main .LastAside .Search input:focus {
+  border: 1px solid rgb(29, 155, 240);
+}
+main .LastAside .Search i {
+  position: relative;
+  left: 40px;
+  padding-left: 10px;
+}
+main .LastAside .Premium {
+  margin-left: 30px;
+  margin-top: 60px;
+  background-color: var(--bg-left);
+  padding: 10px;
+  flex-direction: column;
+  border-radius: 20px;
+  width: 330px;
+}
+main .LastAside .Premium h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-Next);
+}
+main .LastAside .Premium p {
+  font-weight: 600;
+  color: var(--color-Next);
+  padding: 5px 0;
+}
+main .LastAside .Premium button {
+  background-color: var(--color-text);
+  color: var(--bg-color);
+  padding: 10px;
+  border-radius: 25px;
+  margin-top: 5px;
+}
+main .LastAside .WhatHabbin {
+  margin-left: 30px;
+  margin-top: 20px;
+  background-color: var(--bg-left);
+  flex-direction: column;
+  border-radius: 20px;
+  display: flex;
+  width: 330px;
+  flex-direction: column;
+  position: sticky;
+}
+main .LastAside .WhatHabbin h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 10px 15px;
+  color: var(--color-Next);
+}
+main .LastAside .WhatHabbin .Event {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  padding: 3px 15px;
+  width: 100%;
+  transition: 0.5s ease;
+}
+main .LastAside .WhatHabbin .Event .RowEventHeading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+main .LastAside .WhatHabbin .Event .RowEventHeading span {
+  font-size: 0.9rem;
+  color: var(--color-Next);
+}
+main .LastAside .WhatHabbin .Event .RowEventHeading i {
+  color: var(--color-Next);
+  position: relative;
+  top: 5px;
+}
+main .LastAside .WhatHabbin .Event .HeadingEvent span {
+  font-weight: 700;
+  position: relative;
+  bottom: 2px;
+  color: var(--color-Next);
+}
+main .LastAside .WhatHabbin .Event .PostsNum h5 {
+  color: var(--color-Next);
+  font-size: 0.8rem;
+}
+main .LastAside .WhatHabbin .Event:hover {
+  background-color: var(--bg-left);
+}
+main .LastAside .WhatHabbin .EventImaage {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+  padding: 3px 15px;
+  width: 100%;
+  justify-content: space-between;
+  transition: 0.5s ease;
+}
+main .LastAside .WhatHabbin .EventImaage:hover {
+  background-color: var(--bg-left);
+}
+main .LastAside .WhatHabbin .EventImaage .HeadingImage {
+  display: flex;
+  flex-direction: column;
+}
+main .LastAside .WhatHabbin .EventImaage .HeadingImage span {
+  font-size: 0.9rem;
+  color: var(--color-Next);
+}
+main .LastAside .WhatHabbin .EventImaage .HeadingImage h3 {
+  font-weight: 700;
+  color: var(--color-Next);
+}
+main .LastAside .WhatHabbin .EventImaage .Image img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+}
+main .LastAside .WhatHabbin .MoreShowDiv {
+  width: 100%;
+  transition: 0.5s ease;
+  padding: 15px 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+main .LastAside .WhatHabbin .MoreShowDiv:hover {
+  background-color: #ececec;
+}
+main .LastAside .WhatHabbin .MoreShowDiv span {
+  color: var(--color-text);
+}
+main .LastAside .WhoToFollow {
+  margin-left: 30px;
+  margin-top: 60px;
+  background-color: var(--bg-left);
+  flex-direction: column;
+  border-radius: 20px;
+  width: 330px;
+}
+main .LastAside .WhoToFollow h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 10px 15px;
+  color: var(--color-Next);
+}
+main .LastAside .WhoToFollow .CardFollow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 15px;
+  margin: 10px 0;
+  transition: 0.5s ease;
+}
+main .LastAside .WhoToFollow .CardFollow:hover {
+  background-color: var(--bg-left);
+}
+main .LastAside .WhoToFollow .CardFollow .FirstCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+main .LastAside .WhoToFollow .CardFollow .FirstCard img {
+  width: 40px;
+  height: 40px;
+}
+main .LastAside .WhoToFollow .CardFollow .FirstCard .BranNameAndHandle {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+main .LastAside .WhoToFollow .CardFollow .FirstCard .BranNameAndHandle h3 {
+  font-weight: 700;
+  color: var(--color-Next);
+}
+main .LastAside .WhoToFollow .CardFollow .FirstCard .BranNameAndHandle span {
+  color: var(--color-Next);
+}
+main .LastAside .WhoToFollow .CardFollow button {
+  background-color: var(--color-text);
+  padding: 10px;
+  width: 80px;
+  border-radius: 20px;
+  color: var(--bg-color);
+}
+main .LastAside .WhoToFollow .MoreShowDiv {
+  width: 100%;
+  transition: 0.5s ease;
+  padding: 10px 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+main .LastAside .WhoToFollow .MoreShowDiv:hover {
+  background-color: #ececec;
+}
+main .LastAside .WhoToFollow .MoreShowDiv span {
+  color: var(--color-text);
+}
+
+.SecondHomeTweets {
+  font-weight: 700;
+}
+.SecondHomeTweets::after {
+  content: "";
+  background-color: var(--color-text);
+  width: 14%;
+  height: 5px;
+  position: absolute;
+  top: 94px;
+  left: 60.8%;
+  border-radius: 20px;
+}
+
+.Arabichappendo {
+  direction: rtl;
+  font-size: 1rem;
+}
+
+.MoreList {
+  position: absolute;
+  top: 33vh;
+  left: 36vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  width: 300px;
+  z-index: 999;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: var(--bg-color);
+}
+.MoreList .CardChild {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px 0;
+  padding: 10px;
+  color: var(--color-text);
+}
+.MoreList .CardChild span {
+  padding-left: 5px;
+  color: var(--color-Next);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.MoreList hr {
+  border-color: rgb(239, 243, 244);
+  margin: 5px 0;
+}
+.MoreList .CardOption {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.5s ease;
+  width: 100%;
+  padding: 10px;
+  color: var(--color-text);
+}
+.MoreList .CardOption span {
+  font-weight: 600;
+}
+.MoreList .CardOption i {
+  position: relative;
+  top: 4px;
+  color: var(--color-text);
+}
+.MoreList .CardOption:hover {
+  background-color: #ececec;
+}
+.MoreList .option1 {
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 10px;
+  transition: 0.5s ease;
+  color: var(--color-Next);
+}
+.MoreList .option1 span {
+  padding-left: 5px;
+  color: var(--color-Next);
+  font-weight: 400;
+}
+.MoreList .option1:hover {
+  background-color: var(--bg-left);
+}
+.MoreList .option {
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 10px;
+  color: var(--color-Next);
+}
+.MoreList .option span {
+  padding-left: 5px;
+  color: var(--color-Next);
+  font-weight: 400;
+}
+.MoreList .option:hover {
+  background-color: var(--bg-left);
+}
+.MoreList .option2 {
+  color: var(--color-Next);
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 10px;
+}
+.MoreList .option2:hover {
+  background-color: var(--bg-left);
+}
+.MoreList .option2 span {
+  color: var(--color-Next);
+  padding-left: 5px;
+  font-weight: 400;
+}
+
+.DisplayOptions {
+  position: absolute;
+  top: 25vh;
+  left: 80vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
+  width: 550px;
+  z-index: 999;
+  padding: 15px;
+  height: -moz-fit-content;
+  height: fit-content;
+  opacity: 1;
+}
+.DisplayOptions .Title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.DisplayOptions .Title p {
+  font-size: 0.8rem;
+  color: var(--color-text);
+}
+.DisplayOptions .Title h1 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--color-Next);
+}
+.DisplayOptions .RowTwiew {
+  display: flex;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--bg-color);
+  padding: 10px;
+  width: 400px;
+  margin: 15px auto;
+  border-radius: 20px;
+}
+.DisplayOptions .RowTwiew .View {
+  display: flex;
+  flex-direction: row;
+}
+.DisplayOptions .RowTwiew .View img {
+  width: 75px;
+  border-radius: 50%;
+  height: 30px;
+  color: var(--red-color);
+}
+.DisplayOptions .RowTwiew .View .RowDivNow {
+  display: flex;
+  flex-direction: column;
+}
+.DisplayOptions .RowTwiew .View .RowDivNow .name {
+  font-weight: 700;
+  position: relative;
+  left: 5px;
+}
+.DisplayOptions .RowTwiew .View .RowDivNow .name a {
+  text-decoration: none;
+  color: var(--color-Next);
+}
+.DisplayOptions .RowTwiew .View .RowDivNow .name .Handel-name {
+  font-weight: 400;
+  color: var(--color-Next);
+}
+.DisplayOptions .RowTwiew .View .RowDivNow p {
+  color: var(--color-Next);
+}
+.DisplayOptions .RowTwiew .View .RowDivNow .Span {
+  color: var(--green-color);
+}
+.DisplayOptions .Colors span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text);
+  position: relative;
+  left: 30px;
+}
+.DisplayOptions .Colors .ColoresOption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.DisplayOptions .Colors .ColoresOption .ColorRome {
+  width: 450px;
+  height: 48px;
+  background-color: var(--bg-color);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5px;
+  border-radius: 10px;
+}
+.DisplayOptions .Colors .ColoresOption .ColorRome .blue {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--blueWeb-color);
+}
+.DisplayOptions .Colors .ColoresOption .ColorRome .active {
+  opacity: 1;
+}
+.DisplayOptions .Colors .ColoresOption .ColorRome .yello {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--yellWeb-color);
+}
+.DisplayOptions .Colors .ColoresOption .ColorRome .red {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--redWeb-color);
+}
+.DisplayOptions .Colors .ColoresOption .ColorRome .Move {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--MovWeb-color);
+}
+.DisplayOptions .Colors .ColoresOption .ColorRome .orange {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--OrangeWeb-color);
+}
+.DisplayOptions .Colors .ColoresOption .ColorRome .green {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--greenWeb-color);
+}
+.DisplayOptions .Colors .ColoresOption .ColorRome span {
+  margin: 10px 0;
+  opacity: 0.5;
+  position: relative;
+  right: 0px;
+  left: 0px;
+}
+.DisplayOptions .BackGroundColors {
+  margin: 10px 0;
+}
+.DisplayOptions .BackGroundColors span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text);
+  position: relative;
+  left: 30px;
+}
+.DisplayOptions .BackGroundColors .BgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.DisplayOptions .BackGroundColors .BgContainer .BgCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+}
+.DisplayOptions .BackGroundColors .BgContainer .BgCard .BgDefault {
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+.DisplayOptions .BackGroundColors .BgContainer .BgCard .BgDefault span {
+  color: var(--red-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  left: 17px;
+}
+.DisplayOptions .BackGroundColors .BgContainer .BgCard .BgDark {
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 100px;
+  cursor: pointer;
+  height: 100px;
+  background-color: #000;
+  text-align: center;
+}
+.DisplayOptions .BackGroundColors .BgContainer .BgCard .BgDark span {
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--red-color);
+}
+
+.NoneDisplay {
+  display: none;
+}
+
+.FlexDisplay {
+  display: flex;
+}
+
+.BgBlackHov {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.Filter {
+  filter: blur(0px);
+}
+
+.BtnDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+.BtnDisplay button {
+  background-color: var(--color-text);
+  color: var(--bg-color);
+  padding: 10px;
+  width: 100px;
+  border: none;
+  border-radius: 20px;
+}
+
+.active {
+  transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+  .LeftSection {
+    left: 1rem;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+  }
+  .LeftSection .Cards .Card span {
+    display: none;
+  }
+  .LeftSection .Cards .ButtonPost {
+    display: none;
+  }
+  .LeftSection .Profile .rightProfileSide .TextName h4 {
+    display: none;
+  }
+  .LeftSection .Profile .rightProfileSide .TextName span {
+    display: none;
+  }
+  .LeftSection .Profile .IconProfileSide {
+    display: none;
+  }
+  main .MainTwetter .Mid-Aside {
+    margin-left: 15%;
+    width: 100%;
+  }
+  main .MainTwetter .Mid-Aside .HomeBar {
+    width: 75.5%;
+  }
+  main .LastAside {
+    display: none;
+  }
+  .MoreList {
+    top: 39vh;
+    left: 8vh;
+  }
+  .DisplayOptions {
+    left: 8vh;
+    top: 25vh;
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  .LeftSection {
+    left: 6rem;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+  }
+  .LeftSection .Cards .Card span {
+    display: none;
+  }
+  .LeftSection .Cards .ButtonPost {
+    display: none;
+  }
+  .LeftSection .Profile .rightProfileSide .TextName h4 {
+    display: none;
+  }
+  .LeftSection .Profile .rightProfileSide .TextName span {
+    display: none;
+  }
+  .LeftSection .Profile .IconProfileSide {
+    display: none;
+  }
+  main .MainTwetter .Mid-Aside {
+    margin-left: 22%;
+    width: 100%;
+  }
+  main .MainTwetter .Mid-Aside .HomeBar {
+    width: 69.8%;
+  }
+  main .LastAside {
+    display: none;
+  }
+  .MoreList {
+    top: 25vh;
+    left: 11vh;
+  }
+  .DisplayOptions {
+    left: 19vh;
+    top: 16vh;
+  }
+}
+@media (min-width: 991px) and (max-width: 1300px) {
+  .MoreList {
+    top: 26vh;
+    left: 14vh;
+  }
+  .DisplayOptions {
+    left: 28vh;
+    top: 16vh;
+  }
+  .LeftSection {
+    left: 4rem;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+  }
+  .LeftSection .Cards .Card span {
+    display: none;
+  }
+  .LeftSection .Cards .ButtonPost {
+    display: none;
+  }
+  .LeftSection .Profile .rightProfileSide .TextName h4 {
+    display: none;
+  }
+  .LeftSection .Profile .rightProfileSide .TextName span {
+    display: none;
+  }
+  .LeftSection .Profile .IconProfileSide {
+    display: none;
+  }
+  main .MainTwetter .Mid-Aside {
+    margin-left: 15%;
+    width: 100%;
+  }
+  main .MainTwetter .Mid-Aside .HomeBar {
+    width: 45%;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1600px) {
+  .LeftSection {
+    left: 2rem;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+  }
+  main .MainTwetter .Mid-Aside {
+    margin-left: 23%;
+    width: 100%;
+  }
+  main .MainTwetter .Mid-Aside .HomeBar {
+    width: 38.8%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1250px) {
+  .LeftSection {
+    padding: 10px 0 0 1rem;
+  }
+  .LeftSection .Cards .Card span {
+    display: none;
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  .LeftSection {
+    display: flex;
+    flex-direction: column;
+    left: 2rem;
+  }
+  .LeftSection .Cards .Card span {
+    display: none;
+  }
+  .LeftSection .Cards .ButtonPost {
+    display: none;
+  }
+  .LeftSection .Profile .rightProfileSide .TextName {
+    display: none;
+  }
+  .LeftSection .Profile .IconProfileSide {
+    display: none;
+  }
+  main .MidSection {
+    margin-left: 100px;
+    width: 100%;
+  }
+  main .MidSection .Top {
+    width: 69.5%;
+  }
+}/*# sourceMappingURL=Twitter.css.map */

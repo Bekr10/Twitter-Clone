@@ -1,0 +1,1323 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'poppins', sans-serif;
+    background-color: var(--bg-color);
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 15px;
+}
+
+:root {
+    // Colors
+
+    --bg-color: #fff;
+    --color-text: #000;
+    --main-color : #ccc;
+    --header-bg : #f9f9f9;
+    --Hashtag-color : rgba(0, 0, 0, 0.05);
+    --SpanVideo : rgba(0, 0, 0, 0.05);
+    --serach-bg: #fff;
+    --spanVideoColor: #272727;
+    --Hashtag-bg: #f9f9f9;
+    --red-color: #ff3150;
+    --section-color: #eff7fa;
+    --green-color: #33d1cc;
+    --yello-color: #ffc400;
+    --dark-color: #19283f;
+    --black-color: #000016;
+    --none-color:#DDD0C8;
+    --color-Next : #000;
+    --bg-left : rgb(239, 243, 244);
+    // Font size
+    
+    --large-size : 20px;
+    --medueim-size : 15px;
+    --small-size : 10px;
+    --V-small-size : 5px;
+    
+    // Wight
+    
+    --Bold-size : 700;
+    --med-size : 500;
+    --Small-size : 300;
+    
+
+    // Colors web
+
+    --blueWeb-color : rgb(29, 155, 240);
+    --yellWeb-color : rgb(255, 212, 0);
+    --redWeb-color : rgb(249, 24, 128);
+    --MovWeb-color : rgb(120, 86, 255);
+    --OrangeWeb-color : rgb(255, 122, 0);
+    --greenWeb-color : rgb(0, 186, 124);
+    
+}
+@mixin Circle($dimensions){
+    width: $dimensions;
+    height: $dimensions;
+    border-radius: 50%;
+}
+button{
+    border: none;
+}
+li{
+    list-style: none
+}
+.Dark-mode {
+    --spanVideoColor: #ccc;
+    --bg-left : rgb(22, 24, 28);
+    --bg-color: #0b0b0b;
+    --color-text: #fff;
+    --header-bg: #0b0b0b;
+    --main-color:#2c2c2c;
+    --Hashtag-color: rgba(255, 255, 255, 0.05);
+    --SpanVideo : rgba(255, 255, 255, 0.1);
+    --serach-bg: #000;
+    --Hashtag-bg: #0b0b0b;
+    --color-Next : #fff;
+}
+.blue{
+    --color-text :rgb(29, 155, 240);
+}
+.yello{
+    --color-text:rgb(255, 212, 0);
+}
+.red{
+    --color-text: rgb(249, 24, 128);
+}
+.Move{
+    --color-text: rgb(120, 86, 255);
+}
+.orange{
+    --color-text: rgb(255, 122, 0);
+}
+.green{
+    --color-text:rgb(0, 186, 124);
+}
+.LeftSection{
+    position: fixed;
+    left: 22rem;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+    .TwitterIcon{
+        width: 50px;
+        height: 45px;
+        border-radius: 50%;
+        &:hover{
+            background-color: #ececec;
+        }
+    }
+    .Cards{
+        margin-top: 20px;
+        .Card{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 11px 10px;
+            gap: 10px;
+            width: fit-content;
+            border-radius: 20px;
+            transition: .5s ease;
+            .CardNotifi{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .NotifiNumber{
+                    background-color: var(--color-text);
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px;
+                    font-size: .9rem;
+                    position: relative;
+                    right: 18px;
+                    top: -8px;
+                    color: var(--bg-color);
+                }
+            }
+            .rightspanNotifi{
+                position: relative;
+                right: 20px;
+            }
+            i{
+                font-size: 2.3rem;
+                color: var(--color-Next);
+            }
+            span{
+                color: var(--color-text);
+                font-size: 1.4rem;
+                font-weight: 400;
+                text-transform: capitalize;
+            }
+            .ImageIcon{
+                width: 35px;
+            }
+            &:hover{
+                background-color: var(--bg-left);
+            }
+        }
+        .active{
+            span{
+                font-weight: 700;
+            }
+        }
+        .ButtonPost{
+            margin-top: 25px;
+            height: 50px;
+            width: 200px;
+            background-color: var(--color-Next);
+            padding: 10px;
+            border-radius: 20px;
+            color: var(--bg-color);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+    }
+    .Profile{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 20px;
+        width: 70%;
+        transition: .5s ease;
+        padding: 5px;
+        border-radius: 20px;
+        gap: 80px;
+        .rightProfileSide{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            img{
+                @include Circle(40px)
+            }
+            .TextName{
+                padding-left: 10px;
+                h4{
+                    font-weight: 800;
+                    color: var(--color-text);
+                }
+                span{
+                    color: var(--color-text);
+                }
+            }
+
+        }
+        .IconProfileSide{
+            i{
+                color: var(--color-Next);
+            }
+        }
+        &:hover{
+            background-color: var(--bg-left);
+        }
+    }
+}
+
+
+.ProfileListHome{
+    background-color: var(--bg-color);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 300px;
+    border-radius: 20px;
+    position: absolute;
+    top: 82%;
+    left: 17%;
+    .FirstCloneHome{
+        margin-top: 5px;
+        padding: 10px 15px;
+        span{
+            color: var(--color-Next);
+            font-size: 1rem;
+
+        }
+        &:hover{
+            background-color: var(--bg-left);
+        }
+    }
+    .SecondCloneHome{
+        margin-bottom: 5px;
+        padding: 10px 15px;
+        color: var(--color-Next);
+        &:hover{
+            background-color: var(--bg-left);
+        }
+    }
+}
+
+main{
+    width: 90%;
+    height: 100%;
+    .MainTwetter{
+        width: 100%;
+        display: flex;
+        .Mid-Aside{
+            margin-left: 40%;
+            border-left: 1px solid rgb(239, 243, 244);
+            border-right: 1px solid rgb(239, 243, 244);
+            height: 100%;
+            width: 50%;
+            
+            .HomeBar{
+                display: flex;
+                flex-direction: column;
+                backdrop-filter: blur(12px);
+                backface-visibility: hidden;
+                // background-color: var(--bg-color);
+                // filter: blur(2px);
+                position: fixed;
+                z-index: 9;
+                width: 33.4%;
+                .HeadingHome{
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                    padding-left: 15px;
+                    position: relative;
+                    top: 10px;
+                    color: var(--color-text);
+                }
+                .HeadingPages{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    padding-top: 30px;
+                    border-bottom: 1px solid rgb(239, 243, 244);
+                    padding-bottom: 18px;
+                    span{
+                        cursor: pointer;
+                        color: var(--color-Next);
+                    }
+                    .ForTweet{
+                        font-weight: 700;
+                        color: var(--color-Next);
+                        &::after{
+                            content: "";
+                            background-color: var(--color-text);
+                            width: 14%;
+                            height: 5px;
+                            position: absolute;
+                            top: 94px;
+                            left: 24.5%;
+                            border-radius: 20px;
+                        }
+                    }
+                }
+            }
+            .TweetCreate{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 10px;
+                margin-top: 100px;
+                .ImgPageCrate{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 10px 0;
+                    img{
+                        @include Circle(40px);
+                        margin-left: 10px;
+                    }
+                    span{
+                        font-size: 1.3rem;
+                        padding-right: -10px;
+                        position: relative;
+                        left: 15px;
+                        color: #727272;
+                    }
+                }
+                .IconsEmoje{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 20px 0 60px;
+                    margin-top: 10px;
+                    div{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 5px;
+                        i{
+                            font-size: 1.5rem;
+                            color: var(--color-text);
+                        }
+                    }
+                    .ButTwit{
+                        padding: 10px;
+                        background-color: var(--color-text);
+                        border-radius: 20px;
+                        width: 80px;
+                        color: #fff;
+                        height: 35px;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+            .ShowMore{
+                span{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    // margin: 10px 0;
+                    padding: 10px 0;
+                    color: var(--color-text);
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    justify-content: center;
+                    border-top: 1px solid rgb(239, 243, 244);
+                    transition: .5s ease;
+                    &:hover{
+                        background-color: #ccc;
+                    }
+                }
+
+            }
+            .Tweets{
+                display: flex;
+                flex-direction: column;
+                .Tweet{
+                    display: flex;
+                    width: 100%;
+                    min-height: 100px;
+                    border-top: 1px solid rgb(239, 243, 244);
+                    padding: 12px 16px;
+                    transition: .5s ease;
+                    img{
+                        @include Circle(50px);
+                    }
+                    .details{
+                        display: flex;
+                        padding: 0 10px;
+                        flex-direction: column;
+                        .name{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+                            .Tweet-name{
+                                font-weight: 700;
+                                text-decoration: none;
+                                color: var(--color-text);
+                                font-size: 1.2rem;
+                                .Handel-name{
+                                    font-weight: 400;
+                                    font-size: 1rem;
+                                    color: var(--color-Next);
+                                }
+                            }
+                            i{
+                                color: var(--color-text);
+                            }
+                        }
+                        .text{
+                            padding: 3px 0;
+                            p{
+                                display: flex;
+                                flex-direction: column;
+                                color: var(--color-Next);
+                                .spanColor{
+                                    color: var(--color-text);
+                                }
+                            }
+                            .ImageSheet{
+                                width: 100%;
+                                height: fit-content;
+                                border-radius: 20px;
+                                margin: 5px 0 5px 0px;
+                            }
+                        }
+                        .Arabic{
+                            p{
+                                direction: rtl;
+                            }
+                        }
+                        .iconpack{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+                            width: 100%;
+                            .Icon{
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;    
+                                i{
+                                    color: rgb(83, 100, 113);
+                                    font-size: 1.1rem;
+                                }
+                                span{
+                                    font-size: 13px;
+                                    padding-left: 3px;
+                                    color: rgb(83, 100, 113);
+                                }
+                            }
+                        }
+                    }  
+                    &:hover{
+                        background-color: var(--bg-left);
+                    }
+                }
+                .Arabic{
+                    .TweetDetail{
+                        h3{
+                            margin-left: 100px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    .LastAside{
+        padding: 0px 0 0 30px;
+        .Search{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: fixed;
+            margin-bottom: 10px;
+            z-index: 10;
+            background-color: var(--bg-color);
+            padding: 10px 0;
+            input{
+                border-radius: 20px;
+                width: 330px;
+                height: 40px;
+                outline: none;
+                padding: 10px 0px 10px 45px;
+                background-color:rgb(239, 243, 244);
+                border: none;
+                &:focus{
+                    border: 1px solid rgb(29, 155, 240);
+                }
+            }
+            i{
+                position: relative;
+                left: 40px;
+                padding-left: 10px;
+            }
+        }
+        .Premium{
+            margin-left: 30px;
+            margin-top: 60px;
+            background-color: var(--bg-left);
+            padding: 10px;
+            flex-direction: column;
+            border-radius: 20px;
+            width: 330px;
+            h1{
+                font-size: 1.4rem;
+                font-weight: 700;
+                color: var(--color-Next);
+            }
+            p{
+                font-weight: 600;
+                color: var(--color-Next);
+                padding: 5px 0;
+            }
+            button{
+                background-color: var(--color-text);
+                color: var(--bg-color);
+                padding: 10px;
+                border-radius: 25px;
+                margin-top: 5px;
+            }
+        }
+        .WhatHabbin{
+            margin-left: 30px;
+            margin-top: 20px;
+            background-color: var(--bg-left);
+            // padding: 10px;
+            flex-direction: column;
+            border-radius: 20px;
+            display: flex;
+            width: 330px;
+            flex-direction: column;
+            position: sticky;
+            h1{
+                font-size: 1.4rem;
+                font-weight: 700;
+                padding: 10px 15px;
+                color: var(--color-Next);
+            }
+            .Event{
+                display: flex;
+                flex-direction: column;
+                margin: 10px 0;
+                padding: 3px 15px;
+                width: 100%;
+                transition: .5s ease;
+
+                .RowEventHeading{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    span{
+                        font-size: .9rem;
+                        color: var(--color-Next);
+                    }
+                    i{
+                        color: var(--color-Next);
+                        position: relative;
+                        top: 5px;
+                    }
+                }
+                .HeadingEvent{
+                    span{
+                        font-weight: 700;
+                        position: relative;
+                        bottom: 2px;
+                        color: var(--color-Next);
+                    }
+                }
+                .PostsNum{
+                    h5{
+                        color: var(--color-Next);
+                        font-size: .8rem;
+                    }
+                }
+                &:hover{
+                    background-color: var(--bg-left);
+                }
+            }
+            .EventImaage{
+                display: flex;
+                flex-direction: row;
+                margin: 10px 0;
+                padding: 3px 15px;
+                width: 100%;
+                justify-content: space-between;
+                transition: .5s ease;
+                &:hover{
+                    background-color: var(--bg-left);
+                }
+                .HeadingImage{
+                    display: flex;
+                    flex-direction: column;
+                    span{
+                        font-size: .9rem;
+                        color: var(--color-Next);
+                    }
+                    h3{
+                        font-weight: 700;
+                        color: var(--color-Next);
+                    }
+                }
+                .Image{
+                    img{
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+            .MoreShowDiv{
+                width: 100%;
+                transition: .5s ease;
+                padding: 15px 10px;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                &:hover{
+                    background-color: #ececec;
+                }
+                span{
+                    color: var(--color-text);
+                }
+            }
+        }
+        .WhoToFollow{
+            margin-left: 30px;
+            margin-top: 60px;
+            background-color:var(--bg-left);
+            flex-direction: column;
+            border-radius: 20px;
+            width: 330px;
+            h1{
+                font-size: 1.4rem;
+                font-weight: 700;
+                padding: 10px 15px;
+                color: var(--color-Next);
+            }
+            .CardFollow{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding: 5px 15px;
+                margin: 10px 0;
+                transition: .5s ease;
+                &:hover{
+                    background-color: var(--bg-left);
+                }
+                .FirstCard{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                    
+                    }
+                    .BranNameAndHandle{
+                        display: flex;
+                        flex-direction: column;
+                        margin: 0 10px;
+                        h3{
+                            font-weight: 700;
+                            color: var(--color-Next);
+                        }
+                        span{
+                            color: var(--color-Next);
+                        }
+                    }
+                }
+                button{
+                    background-color: var(--color-text);
+                    padding: 10px;
+                    width: 80px;
+                    border-radius: 20px;
+                    color: var(--bg-color);
+                }
+            }
+            .MoreShowDiv {
+                width: 100%;
+                transition: .5s ease;
+                padding: 10px 15px;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+
+                &:hover {
+                    background-color: #ececec;
+                }
+
+                span {
+                    color: var(--color-text);
+                }
+            }
+        }
+    }
+}
+
+//  Free Classes Js
+
+.SecondHomeTweets{
+    font-weight: 700;
+    &::after {
+        content: "";
+        background-color:var(--color-text);
+        width: 14%;
+        height: 5px;
+        position: absolute;
+        top: 94px;
+        left: 60.8%;
+        border-radius: 20px;
+    }
+}
+
+.Arabichappendo {
+    direction: rtl;
+    font-size: 1rem;
+}
+.MoreList{
+    position: absolute;
+    top: 33vh;
+    left: 36vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    width: 300px;
+    z-index: 999;
+    height: fit-content;
+    background-color: var(--bg-color);
+    .CardChild{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 5px 0;
+        padding: 10px;
+        color: var(--color-text);
+        span{
+            padding-left: 5px;
+            color: var(--color-Next);
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+    }
+    hr{
+        border-color: rgb(239, 243, 244);
+        margin: 5px 0;
+    }
+    .CardOption{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        transition: .5s ease;
+        width: 100%;
+        padding: 10px;
+        color: var(--color-text);
+        span{
+            font-weight: 600;
+        }
+        i{
+            position: relative;
+            top: 4px;
+            color: var(--color-text);
+        }
+        &:hover{
+            background-color: #ececec;
+        }
+    }
+    .option1{
+        // display: none;
+        flex-direction: row;
+        align-items: center;
+        padding: 5px 10px;
+        transition: .5s ease;
+        color: var(--color-Next);
+        span{
+            padding-left: 5px;
+            color: var(--color-Next);
+            font-weight: 400;
+        }
+        &:hover{
+            background-color: var(--bg-left);
+        }
+    }
+    .option{
+        // display: none;
+        flex-direction: row;
+        align-items: center;
+        padding: 5px 10px;
+        color: var(--color-Next);
+        span{
+            padding-left: 5px;
+            color: var(--color-Next);
+            font-weight: 400;
+        }
+        &:hover{
+            background-color: var(--bg-left);
+        }
+    }
+    .option2{
+        color: var(--color-Next);
+        // display: none;
+        flex-direction: row;
+        align-items: center;
+        padding: 5px 10px;
+        &:hover{
+            background-color: var(--bg-left);
+        }
+        span{
+            color: var(--color-Next);
+            padding-left: 5px;
+            font-weight: 400;
+        }
+        
+    }
+}
+.DisplayOptions {
+    position: absolute;
+    top: 25vh;
+    left: 80vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+    width: 550px;
+    z-index: 999;
+    padding: 15px;
+    height: fit-content;
+    opacity: 1;
+    .Title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+            font-size: .8rem;
+            color: var(--color-text);
+        }
+        
+        h1 {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--color-Next);
+        }
+    }
+
+
+    .RowTwiew {
+        .View{
+            display: flex;
+            flex-direction: row;
+            img {
+                width: 75px;
+                border-radius: 50%;
+                height: 30px;
+                color: var(--red-color);
+            }
+            
+            .RowDivNow {
+                display: flex;
+                flex-direction: column;
+                
+                .name {
+                    font-weight: 700;
+                    position: relative;
+                    left: 5px;
+                    a{
+                        text-decoration: none;
+                        color: var(--color-Next);
+                    }
+                    
+                    .Handel-name {
+                        font-weight: 400;
+                        color: var(--color-Next);
+                    }
+                }
+                p{
+                    color: var(--color-Next);
+                }
+                
+                .Span {
+                    color: var(--green-color);
+                }
+            }
+        }
+
+        display: flex;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        flex-direction: row;
+        align-items: center;
+        background-color: var(--bg-color);
+        padding: 10px;
+        width: 400px;
+        margin: 15px auto;
+        border-radius: 20px;
+    }
+    .Colors{
+        span{
+            font-size: .8rem;
+            font-weight: 600;
+            color: var(--color-text);
+            position: relative;
+            left: 30px;
+
+        }
+        .ColoresOption{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .ColorRome{
+                width: 450px;
+                height: 48px;
+                background-color: var(--bg-color);
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+                padding: 5px;
+                border-radius: 10px;
+
+                .blue{
+                    @include Circle(35px);
+                    background-color: var(--blueWeb-color);
+                }
+                .active{
+                    opacity: 1;
+                }
+                .yello{
+                    @include Circle(35px);
+                    background-color: var(--yellWeb-color);
+                }
+                .red{
+                    @include Circle(35px);
+                    background-color: var(--redWeb-color);
+                }
+                .Move{
+                    @include Circle(35px);
+                    background-color: var(--MovWeb-color);
+                }
+                .orange{
+                    @include Circle(35px);
+                    background-color: var(--OrangeWeb-color);
+                }
+                .green{
+                    @include Circle(35px);
+                    background-color: var(--greenWeb-color);
+                }
+                span{
+                    margin: 10px 0;
+                    opacity: .5;
+                    position: relative;
+                    right: 0px;
+                    left: 0px;
+                }
+            }
+        }
+    }
+    .BackGroundColors{
+    margin: 10px 0;
+        span{
+            font-size: .8rem;
+            font-weight: 600;
+            color: var(--color-text);
+            position: relative;
+            left: 30px;
+            
+        }
+        .BgContainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .BgCard{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                gap: 15px;
+                .BgDefault{
+                    display: flex;
+                    align-items: center;
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    width: 100px;
+                    height: 100px;
+                    background-color: #fff;
+                    text-align: center;
+                    cursor: pointer;
+                    span{
+                        color: var(--red-color);
+                        font-size: 1rem;
+                        text-transform: uppercase;
+                        text-align: center;
+                        position: relative;
+                        left: 17px;
+                    }
+                }
+                .BgDark{
+                    display: flex;
+                    align-items: center;
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    width: 100px;
+                    cursor: pointer;
+                    height: 100px;
+                    background-color: #000;
+                    text-align: center;
+                    span{
+                        font-size: 1rem;
+                        text-transform: uppercase;
+                        text-align: center;
+                        color: var(--red-color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.NoneDisplay{
+    display: none;
+}
+.FlexDisplay{
+    display: flex;
+}
+
+.BgBlackHov{
+    opacity: .5;
+    cursor: default;
+}
+.Filter{
+    filter: blur(0px);
+}
+.BtnDisplay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    button{
+        background-color: var(--color-text);
+        color: var(--bg-color);
+        padding: 10px;
+        width: 100px;
+        border: none;
+        border-radius: 20px;
+    }
+}
+.active{
+    transform: scale(1.1);
+}
+
+@media (max-width : 767px) {
+    .LeftSection{
+        left: 1rem;
+        width: 10%;
+        display: flex;
+        flex-direction: column;
+        .Cards {
+            .Card{
+                span{
+                    display: none;
+                }
+            }
+            .ButtonPost{
+                display: none;
+            }
+        }
+        .Profile{
+            .rightProfileSide{
+                .TextName{
+                    h4{
+                        display: none;
+                    }
+                    span{
+                        display: none;
+                    }
+                }
+            }
+            .IconProfileSide{
+                display: none;
+            }
+        }
+    }
+    main{
+    .MainTwetter{
+        .Mid-Aside{
+            margin-left: 15%;
+            width: 100%;
+                .HomeBar{
+                    width: 75.5%;
+                }
+            }
+        }
+        .LastAside{
+            display: none;
+        }
+    }
+    .MoreList{
+        top: 39vh;
+        left: 8vh;
+    }
+    .DisplayOptions{
+        left: 8vh;
+        top: 25vh;
+    }
+}
+@media (min-width : 767px) and (max-width : 991px) {
+    .LeftSection{
+        left: 6rem;
+        width: 10%;
+        display: flex;
+        flex-direction: column;
+        .Cards {
+            .Card{
+                span{
+                    display: none;
+                }
+            }
+            .ButtonPost{
+                display: none;
+            }
+        }
+        .Profile{
+            .rightProfileSide{
+                .TextName{
+                    h4{
+                        display: none;
+                    }
+                    span{
+                        display: none;
+                    }
+                }
+            }
+            .IconProfileSide{
+                display: none;
+            }
+        }
+    }
+    main{
+    .MainTwetter{
+        .Mid-Aside{
+            margin-left: 22%;
+            width: 100%;
+                .HomeBar{
+                    width: 69.8%;
+                }
+            }
+        }
+        .LastAside{
+            display: none;
+        }
+    }
+    .MoreList {
+        top: 25vh;
+        left: 11vh;
+    }
+
+    .DisplayOptions {
+        left: 19vh;
+        top: 16vh;
+    }
+}
+@media (min-width : 991px) and (max-width : 1300px) {
+    .MoreList {
+        top: 26vh;
+        left: 14vh;
+    }
+    
+    .DisplayOptions {
+        left: 28vh;
+        top: 16vh;
+    }
+    .LeftSection {
+            left: 4rem;
+            width: 10%;
+            display: flex;
+            flex-direction: column;
+    
+            .Cards {
+                .Card {
+                    span {
+                        display: none;
+                    }
+                }
+    
+                .ButtonPost {
+                    display: none;
+                }
+            }
+    
+            .Profile {
+                .rightProfileSide {
+                    .TextName {
+                        h4 {
+                            display: none;
+                        }
+    
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+    
+                .IconProfileSide {
+                    display: none;
+                }
+            }
+        }
+        main {
+            .MainTwetter {
+                .Mid-Aside {
+                    margin-left: 15%;
+                    width: 100%;
+    
+                    .HomeBar {
+                        width: 45%;
+                    }
+                }
+            }
+        }
+}
+@media (min-width : 1300px) and (max-width : 1600px) {
+    .LeftSection {
+            left: 2rem;
+            width: 10%;
+            display: flex;
+            flex-direction: column;
+    
+            .Cards {
+                .Card {
+                    span {
+                    }
+                }
+            }
+        }
+        main {
+            .MainTwetter {
+                .Mid-Aside {
+                    margin-left: 23%;
+                    width: 100%;
+    
+                    .HomeBar {
+                        width: 38.8%;
+                    }
+                }
+            }
+        }
+}
+@media (min-width: 1025px) and (max-width : 1250px) {
+    .LeftSection {
+        padding: 10px 0 0 1rem;
+
+        .Cards {
+            .Card {
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 767px) and (max-width : 991px) {
+    .LeftSection {
+        display: flex;
+        flex-direction: column;
+        left: 2rem;
+
+        .Cards {
+            .Card {
+                span {
+                    display: none;
+                }
+            }
+
+            .ButtonPost {
+                display: none;
+            }
+        }
+
+        .Profile {
+            .rightProfileSide {
+                .TextName {
+                    display: none;
+                }
+            }
+
+            .IconProfileSide {
+                display: none;
+            }
+        }
+    }
+
+    main {
+        .MidSection {
+            margin-left: 100px;
+            width: 100%;
+
+            .Top {
+                width: 69.5%;
+            }
+        }
+    }
+}
